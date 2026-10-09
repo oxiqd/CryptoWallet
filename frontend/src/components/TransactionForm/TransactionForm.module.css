@@ -1,0 +1,29 @@
+.form {
+  display: grid;
+  gap: 16px;
+}
+.amount {
+  position: relative;
+  margin-top: -8px;
+}
+.amount input {
+  padding-right: 65px;
+}
+.amount span {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  color: var(--color-muted);
+  pointer-events: none;
+}
+.available {
+  margin-top: -9px;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+.note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--color-muted);
+  line-height: 1.7;
+}

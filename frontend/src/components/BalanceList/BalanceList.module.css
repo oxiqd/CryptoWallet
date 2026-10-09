@@ -1,0 +1,65 @@
+.list {
+  display: grid;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 21px 0;
+  border-bottom: 1px solid #edf0f2;
+}
+.row:first-child {
+  padding-top: 2px;
+}
+.row:last-child {
+  border-bottom: none;
+  padding-bottom: 2px;
+}
+.icon {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 26px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.BTC {
+  background: #fff3e1;
+  color: #f39822;
+}
+.ETH {
+  background: #eef0fc;
+  color: #7585cc;
+}
+.USDT {
+  background: #e7f6f0;
+  color: #249b79;
+}
+.name,
+.amount {
+  display: grid;
+  gap: 3px;
+}
+.name strong,
+.amount strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+.name span,
+.amount span {
+  color: var(--color-muted);
+  font-size: 12px;
+}
+.amount {
+  margin-left: auto;
+  text-align: right;
+  overflow-wrap: anywhere;
+  min-width: 0;
+  font-variant-numeric: tabular-nums;
+}
+.state {
+  color: var(--color-muted);
+  padding: 32px 0;
+}

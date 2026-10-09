@@ -1,0 +1,252 @@
+.layout {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.aside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 9%;
+  background: #edf7f8;
+  overflow: hidden;
+}
+.pitch {
+  margin: auto 0;
+  padding-top: 55px;
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.pitch h1 {
+  font-size: clamp(34px, 3.5vw, 54px);
+  line-height: 1.13;
+  letter-spacing: -2px;
+  font-weight: 650;
+}
+.pitch h1 span {
+  color: var(--color-primary);
+}
+.description {
+  margin-top: 22px;
+  max-width: 360px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color-muted);
+}
+.art {
+  position: relative;
+  height: 280px;
+  max-width: 430px;
+  margin-top: 20px;
+}
+.orbit {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border: 1px solid #cbe8ea;
+  border-radius: 50%;
+  top: 0;
+  left: 60px;
+}
+.artCard {
+  position: absolute;
+  top: 62px;
+  left: 12px;
+  width: 310px;
+  padding: 26px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  background: #ffffffd9;
+  box-shadow: 0 20px 50px #006b7712;
+  transform: rotate(-5deg);
+}
+.artCard > span {
+  color: var(--color-muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.artCard strong {
+  display: block;
+  margin: 14px 0 25px;
+  font-size: 26px;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+}
+.artCard div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  color: var(--color-muted);
+}
+.artCard i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+.coinB,
+.coinE,
+.coinT {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  font-size: 37px;
+  font-weight: 600;
+  box-shadow: 0 10px 20px #10182809;
+  z-index: 1;
+}
+.coinB {
+  top: 17px;
+  left: 295px;
+  background: #fff2dd;
+  color: #f39822;
+  transform: rotate(15deg);
+}
+.coinE {
+  top: 186px;
+  left: 287px;
+  background: #e8ecff;
+  color: #7585cc;
+}
+.coinT {
+  top: 222px;
+  left: 2px;
+  background: #def3e9;
+  color: #249b79;
+  width: 46px;
+  height: 46px;
+  font-size: 28px;
+}
+.footer {
+  color: #809295;
+  font-size: 12px;
+  margin-top: 40px;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 48px;
+}
+.content {
+  width: 100%;
+  max-width: 380px;
+}
+.badge {
+  color: var(--color-primary-dark);
+  background: #eaf8f8;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 1.2px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  margin-bottom: 18px;
+}
+.content h2 {
+  font-size: 32px;
+  font-weight: 650;
+  letter-spacing: -1px;
+}
+.subtitle {
+  color: var(--color-muted);
+  margin-top: 10px;
+  margin-bottom: 32px;
+}
+.form {
+  display: grid;
+  gap: 18px;
+  margin-top: 20px;
+}
+.password {
+  position: relative;
+  margin-top: -10px;
+}
+.password input {
+  padding-right: 88px;
+}
+.password button {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  background: transparent;
+  border: 0;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+.form > button {
+  margin-top: 6px;
+  min-height: 48px;
+}
+.switch {
+  margin-top: 24px;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 13px;
+}
+.switch a {
+  font-weight: 600;
+  margin-left: 4px;
+  text-decoration: none;
+}
+.disclaimer {
+  margin-top: 42px;
+  color: #98a2b3;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.retry {
+  display: block;
+  border: 0;
+  background: none;
+  color: inherit;
+  padding: 8px 0 0;
+  text-decoration: underline;
+}
+.mobileBrand {
+  display: none;
+}
+@media (max-width: 1000px) {
+  .aside {
+    padding: 35px 8%;
+  }
+  .art {
+    transform: scale(0.85);
+    transform-origin: left;
+  }
+  .main {
+    padding: 32px;
+  }
+}
+@media (max-width: 760px) {
+  .layout {
+    display: block;
+    background: white;
+  }
+  .aside {
+    display: none;
+  }
+  .main {
+    min-height: 100dvh;
+    flex-direction: column;
+    padding: 30px 24px;
+  }
+  .mobileBrand {
+    display: block;
+    margin-bottom: 54px;
+  }
+  .content h2 {
+    font-size: 29px;
+  }
+}

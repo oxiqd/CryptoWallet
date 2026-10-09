@@ -1,0 +1,31 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 750;
+  letter-spacing: -0.9px;
+  white-space: nowrap;
+}
+.mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: var(--color-primary);
+  color: white;
+  margin-right: 11px;
+}
+.light {
+  font-weight: 450;
+}
+@media (max-width: 360px) {
+  .brand {
+    font-size: 18px;
+  }
+  .mark {
+    width: 34px;
+    height: 34px;
+    margin-right: 8px;
+  }
+}

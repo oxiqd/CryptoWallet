@@ -1,0 +1,132 @@
+.main {
+  max-width: 1240px;
+  margin: auto;
+  padding: 42px 32px 24px;
+}
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.eyebrow {
+  color: var(--color-primary-dark);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 1.6px;
+  margin-bottom: 10px;
+}
+.intro h1 {
+  font-size: 30px;
+  font-weight: 650;
+  letter-spacing: -1px;
+}
+.subtitle {
+  color: var(--color-muted);
+  margin-top: 8px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.overview {
+  display: grid;
+  gap: 20px;
+  min-width: 0;
+}
+.tag {
+  color: var(--color-primary-dark);
+  background: #eaf8f8;
+  padding: 5px 10px;
+  font-size: 11px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.walletFoot {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid var(--color-border);
+  margin-top: 26px;
+  padding-top: 17px;
+  font-size: 11px;
+  color: var(--color-muted);
+}
+.notice {
+  display: flex;
+  gap: 14px;
+  border: 1px solid #dbecee;
+  border-radius: var(--radius-md);
+  padding: 20px;
+  background: #eff8f9;
+}
+.notice > span {
+  color: var(--color-primary);
+  font-size: 29px;
+  line-height: 1;
+}
+.notice strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+.notice p {
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 6px;
+  max-width: 470px;
+}
+.history {
+  margin-top: 28px;
+}
+.count {
+  display: grid;
+  place-items: center;
+  min-width: 28px;
+  height: 28px;
+  background: #f2f4f7;
+  border-radius: 6px;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 26px;
+  color: #98a2b3;
+  font-size: 11px;
+}
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .main {
+    padding: 30px 24px 20px;
+  }
+}
+@media (max-width: 600px) {
+  .main {
+    padding: 28px 16px 20px;
+  }
+  .intro {
+    align-items: start;
+    gap: 16px;
+  }
+  .intro h1 {
+    font-size: 24px;
+  }
+  .intro > button {
+    min-height: 38px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .subtitle {
+    font-size: 13px;
+  }
+  .eyebrow {
+    font-size: 9px;
+  }
+}
