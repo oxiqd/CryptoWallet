@@ -18,17 +18,23 @@ export const createRefreshToken = (jwt, user) => {
 };
 
 export const setRefreshTokenCookie = (reply, refreshToken) => {
+  const isProduction = env.nodeEnv === 'production';
+
   reply.setCookie(REFRESH_TOKEN_COOKIE_NAME, refreshToken, {
     httpOnly: true,
-    secure: env.nodeEnv === 'production',
-    sameSite: 'strict',
+    secure: isProduction,
+    sameSite: isProduction ? 'none' : 'strict',
     path: '/auth',
     maxAge: REFRESH_TOKEN_MAX_AGE_SECONDS,
   });
 };
 
 export const clearRefreshTokenCookie = (reply) => {
+  const isProduction = env.nodeEnv === 'production';
+
   reply.clearCookie(REFRESH_TOKEN_COOKIE_NAME, {
+    secure: isProduction,
+    sameSite: isProduction ? 'none' : 'strict',
     path: '/auth',
   });
 };

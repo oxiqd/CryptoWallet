@@ -1,12 +1,12 @@
 import cors from '@fastify/cors';
 
-const allowedOrigins = ['http://localhost:5173'];
+import { env } from '../config/env.js';
 
 export const corsPlugin = async (app) => {
   app.register(cors, {
-    origin: allowedOrigins,
+    origin: env.cors.allowedOrigins,
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization'],
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   });
 };

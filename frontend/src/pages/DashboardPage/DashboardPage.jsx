@@ -39,6 +39,7 @@ export default function DashboardPage() {
     setLoading(false);
     if (!Object.keys(nextErrors).length) setUpdated(new Date());
   }, [request]);
+
   useEffect(() => {
     load();
     return () => controller.current?.abort();
@@ -115,7 +116,7 @@ export default function DashboardPage() {
         <footer className={styles.footer}>
           <span>
             Crypto Wallet{' '}
-            <a href="https://github.com/oxiqd" target="_blank">
+            <a href="https://github.com/oxiqd" target="_blank" rel="noreferrer">
               by oxiqod
             </a>
           </span>
