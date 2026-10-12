@@ -66,6 +66,9 @@ export default function AuthForm({ mode }) {
           </div>
         </div>
         <p className={styles.footer}>Crypto Wallet · Учебный проект</p>
+        <a href="https://github.com/oxiqd" target="_blank">
+          by oxiqod
+        </a>
       </aside>
       <main className={styles.main}>
         <div className={styles.mobileBrand}>

@@ -130,6 +130,7 @@
   color: #809295;
   font-size: 12px;
   margin-top: 40px;
+  margin-right: 8px;
 }
 .main {
   display: flex;
@@ -249,4 +250,9 @@
   .content h2 {
     font-size: 29px;
   }
+}
+
+.line{
+  display: flex;
+  align-items: end;
 }

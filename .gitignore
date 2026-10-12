@@ -9,8 +9,24 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 
-.idea
+.idea/
+.vscode/
 
-/node_modules
+# Dependencies and generated files, at every project level
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+.vite/
+.vercel/
+*.log
 
+# Local configuration; safe templates stay public
 .env
+.env.*
+!.env.example
+
+# macOS folder metadata
+.DS_Store
+._*

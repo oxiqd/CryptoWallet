@@ -9,6 +9,7 @@ import { setupErrorHandler } from './plugins/error-handler.plugin.js';
 import { jwtPlugin } from './plugins/jwt.plugin.js';
 import { setupAuthenticate } from './plugins/authenticate.plugin.js';
 import { cookiePlugin } from './plugins/cookie.plugin.js';
+import { corsPlugin } from './plugins/cors.plugin.js';
 
 export const buildApp = () => {
   const app = Fastify({
@@ -17,6 +18,7 @@ export const buildApp = () => {
 
   setupErrorHandler(app);
 
+  corsPlugin(app);
   cookiePlugin(app);
   jwtPlugin(app);
   setupAuthenticate(app);

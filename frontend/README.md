@@ -1,14 +1,14 @@
 # Crypto Wallet frontend
 
-Отдельное приложение React + Vite + JavaScript. CSS Modules, React Router, native fetch. Бэкенд в корне проекта не изменён.
+Отдельное приложение React + Vite + JavaScript. CSS Modules, React Router, native fetch.
 
 ## Запуск
 
 Из папки `frontend`:
 
 ```sh
-npm install
-npm run dev
+npm ci
+npm run front_dev
 ```
 
 Открыть http://localhost:5173. По умолчанию API: http://localhost:3000. Для изменения скопировать `.env.example` в `.env` и указать `VITE_API_URL`. После изменения env перезапустить Vite.
@@ -20,7 +20,7 @@ npm run preview
 
 ## Подключение бэкенда
 
-Фронтенд уже отправляет реальные запросы по существующему контракту. Для работы требуется запущенный бэкенд и PostgreSQL. В текущем `src/app.js` бэкенда нет CORS: при разных origins добавить разрешение для `http://localhost:5173` и `credentials: true`. Не использовать wildcard origin с cookies. Это задача интеграции, код бэкенда здесь не менялся.
+Фронтенд отправляет реальные запросы по существующему контракту. Для работы требуется запущенный бэкенд и PostgreSQL с таблицами проекта. CORS в `src/plugins/cors.plugin.js` разрешает `http://localhost:5173` с credentials. Использовать именно `localhost`, поскольку `127.0.0.1` — другой origin. Инструкция по настройкам сервера и текущее ограничение со схемой БД описаны в корневом README.
 
 Все ответы читаются из `data`. Балансы: `wallet.balances[]`, суммы: PostgreSQL NUMERIC strings, даты операций: `created_at`. Строковые суммы отображаются без преобразования в Number; POST amount отправляется числом, как требует текущая схема API. Точность входящих сумм ограничена JavaScript Number и контрактом сервера.
 

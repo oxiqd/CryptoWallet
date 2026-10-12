@@ -113,7 +113,12 @@ export default function DashboardPage() {
           )}
         </Card>
         <footer className={styles.footer}>
-          <span>Crypto Wallet</span>
+          <span>
+            Crypto Wallet{' '}
+            <a href="https://github.com/oxiqd" target="_blank">
+              by oxiqod
+            </a>
+          </span>
           <span>BTC · ETH · USDT</span>
         </footer>
       </main>
