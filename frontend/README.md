@@ -1,4 +1,4 @@
-# Crypto Wallet frontend
+# CryptoWallet frontend
 
 Отдельное приложение React + Vite + JavaScript. CSS Modules, React Router, native fetch.
 
@@ -20,7 +20,7 @@ npm run preview
 
 ## Подключение бэкенда
 
-Фронтенд отправляет реальные запросы по существующему контракту. Для работы требуется запущенный бэкенд и PostgreSQL с таблицами проекта. CORS в `src/plugins/cors.plugin.js` разрешает `http://localhost:5173` с credentials. Использовать именно `localhost`, поскольку `127.0.0.1` — другой origin. Инструкция по настройкам сервера и текущее ограничение со схемой БД описаны в корневом README.
+Фронтенд отправляет реальные запросы по существующему контракту. Для работы требуется запущенный бэкенд и PostgreSQL с таблицами проекта. CORS в `backend/src/plugins/cors.plugin.js` разрешает `http://localhost:5173` с credentials. Использовать именно `localhost`, поскольку `127.0.0.1` — другой origin. Настройка сервера и текущее ограничение со схемой БД описаны в [README backend](../backend/README.md).
 
 Все ответы читаются из `data`. Балансы: `wallet.balances[]`, суммы: PostgreSQL NUMERIC strings, даты операций: `created_at`. Строковые суммы отображаются без преобразования в Number; POST amount отправляется числом, как требует текущая схема API. Точность входящих сумм ограничена JavaScript Number и контрактом сервера.
 
