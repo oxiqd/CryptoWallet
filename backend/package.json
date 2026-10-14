@@ -9,7 +9,7 @@
   "type": "module",
   "scripts": {
     "back_dev": "node --env-file=.env --watch src/server.js",
-    "start": "node --env-file=.env src/server.js",
+    "start": "node src/server.js",
     "lint": "eslint . --fix",
     "format": "prettier . --write"
   },
